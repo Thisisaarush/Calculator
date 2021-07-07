@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #bdc3c7, #2c3e50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.heading {
+  font-family: 'Encode Sans SC', sans-serif;
+  position: relative;
+  left: 10px;
+  bottom: -10px;
+}
+
+.calculator {
+  background-color: white;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.3);
+}
+
+.calculator-display {
+  background: black;
+  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 8px 8px 0 0;
+}
+
+.calculator-display h1 {
+  margin: 0;
+  padding: 25px;
+  font-size: 45px;
+  font-family: 'Lucida Console', sans-serif;
+  font-weight: 100;
+  overflow-x: auto;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+button {
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: 100;
+  font-family: 'Lucida Console', sans-serif;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: rgb(196, 196, 196);
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:focus {
+  outline: none;
+}
+
+.operator {
+  background: rgb(117, 117, 117);
+  color: white;
+  font-size: 25px;
+}
+
+.equal-sign {
+  grid-column: -2;
+  grid-row: 2/span 4;
+  background: rgb(0, 121, 202);
+}
+
+.clear {
+  background: rgb(255, 136, 136);
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .calculator {
+    width: 95%;
+  }
+}
